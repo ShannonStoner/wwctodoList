@@ -8,7 +8,7 @@ function todoControllerFunction() {
   // todoCtrl.letters = ['A','B','C','D'];
 
   todoCtrl.message = "Thanks for coming out!";
-  todoCtrl.todoItem = "Todo List!";
+  todoCtrl.todoItem = "Todo List!!!!!!";
 
   // todoCtrl.count = 1;
 
