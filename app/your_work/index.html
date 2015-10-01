@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoList">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+  <link rel="stylesheet" href="../todo-styles.css">
+  <link rel="stylesheet" href="styles.css">
+		<script type="text/javascript" src="../../assets/vendor/angular/angular.min.js"></script>
+</head>
+<body>
+		<div ng-controller="todoListController as todoCtrl" id="todo-list">
+
+      <h1>{{ todoCtrl.message }}</h1>
+      <input type="text" ng-model="todoCtrl.todoItem">
+      <button ng-click="todoCtrl.addTodo()">Add</button>
+
+      <!-- <h3>{{ todoCtrl.todoItem }}</h3> -->
+
+      <!--<button ng-click="todoCtrl.count = todoCtrl.count + 1">Click me!</button>
+      <h4>{{ todoCtrl.count }}</h4>-->
+
+      <!-- <ul>
+        <li>{{ todoCtrl.todoList }}</li>
+      </ul>
+
+      <h2 ng-repeat="letter in todoCtrl.letters track by $index">{{ letter }}</h2> -->
+
+      <ul>
+        <li ng-repeat="todo in todoCtrl.todoList">
+          <span>{{ todo.text }}</span>
+            <button ng-click="todoCtrl.todoDone($index)">done</button> <!-- $index references array's index -->
+        </li>
+      </ul>
+
+		</div>
+		<script src="script.js"></script>
+</body>
+</html>

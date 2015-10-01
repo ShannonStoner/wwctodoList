@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoList">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../todo-styles.css">
+		<link rel="stylesheet" href="styles.css">
+		<script type="text/javascript" src="../../assets/vendor/angular/angular.min.js"></script>
+</head>
+<body>
+		<div ng-controller="todoListController as todoCtrl" id="todo-list">
+
+      <h1>{{todoCtrl.title}}</h1>
+
+      <input ng-model="todoCtrl.newTodo" type="text">
+      <div>
+        <h3>{{todoCtrl.newTodo}}</h3>
+      </div>
+
+		</div>
+		<script src="script.js"></script>
+</body>
+</html>

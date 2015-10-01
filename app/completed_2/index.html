@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoList">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+  <link rel="stylesheet" href="../todo-styles.css">
+  <link rel="stylesheet" href="styles.css">
+		<script type="text/javascript" src="../../assets/vendor/angular/angular.min.js"></script>
+</head>
+<body>
+		<div ng-controller="todoListController as todoCtrl" id="todo-list">
+
+      <h1>{{todoCtrl.title}}</h1>
+
+      <div id="input-todo-container">
+        <input ng-model="todoCtrl.newTodo" type="text">
+        <button ng-click="todoCtrl.addTodo()">Add</button>
+      </div>
+
+      <div>{{todoCtrl.todoList}}</div>
+
+    </div>
+		<script src="script.js"></script>
+</body>
+</html>
